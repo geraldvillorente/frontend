@@ -17,7 +17,7 @@ define([
     //Modules
     'common/utils/storage',
     'common/utils/detect',
-    //'common/modules/onward/most-popular-factory',
+    'common/modules/onward/most-popular-factory',
     'common/modules/onward/related',
     'common/modules/onward/onward-content',
     'common/modules/ui/images',
@@ -73,7 +73,7 @@ define([
 
     storage,
     detect,
-    //MostPopularFactory,
+    MostPopularFactory,
     Related,
     Onward,
     images,
@@ -148,7 +148,7 @@ define([
 
         transcludePopular: function (config) {
             mediator.on('page:common:ready', function() {
-              //  new MostPopularFactory(config);
+                new MostPopularFactory(config);
             });
         },
 

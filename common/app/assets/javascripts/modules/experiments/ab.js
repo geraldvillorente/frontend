@@ -6,7 +6,7 @@ define([
     'common/modules/experiments/tests/high-relevance-commercial-component',
     'common/modules/experiments/tests/hide-supporting-links',
     'common/modules/experiments/tests/across-the-guardian',
-    'common/modules/experiments/tests/display-social-burners'
+    'common/modules/experiments/tests/display-referred-content'
 ], function (
     common,
     store,
@@ -15,14 +15,14 @@ define([
     ABHighRelevanceCommercialComponent,
     ABHideSupportingLinks,
     ABAcrossTheGuardian,
-    ABDisplaySocialBurners
+    ABDisplayReferredContent
 ) {
 
     var TESTS = [
             new ABHighRelevanceCommercialComponent(),
             new ABHideSupportingLinks(),
             new ABAcrossTheGuardian(),
-            new ABDisplaySocialBurners()
+            new ABDisplayReferredContent()
         ],
         participationsKey = 'gu.ab.participations';
 
