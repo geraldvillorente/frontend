@@ -46,7 +46,7 @@ object Switches extends Collections {
 
   // this is 3 months - at the end of this a decision is expected
   // and one (or both) of the 2 needs to go.
-  private lazy val profilingEvalDeadline = new DateMidnight(2014, 6, 10)
+  private lazy val profilingEvalDeadline = new DateMidnight(2014, 6, 17)
 
 
   // Load Switches
@@ -125,9 +125,14 @@ object Switches extends Collections {
     safeState = Off, sellByDate = new DateMidnight(2014, 6, 30)
   )
 
+  val SurveyBannerSwitch = Switch("Advertising", "survey-banner",
+    "Display survey banner on all devices",
+    safeState = Off, sellByDate = new DateMidnight(2014, 7, 1)
+  )
+
   val ForcePageSkinSwitch = Switch("Advertising", "force-page-skin",
     "Temp switch, allows us to force the page into 'page skin' mode",
-    safeState = Off, sellByDate = new DateMidnight(2014, 6, 7)
+    safeState = Off, sellByDate = new DateMidnight(2014, 6, 14)
   )
 
   // Ad Targeting
@@ -215,11 +220,6 @@ object Switches extends Collections {
     safeState = Off, never
   )
 
-  val FunctionBindSwitch = Switch("Analytics", "function-bind",
-    "Enables function.prototype.bind polyfill",
-    safeState = Off, new DateMidnight(2014, 6, 6)
-  )
-
   // Feature Switches
 
   val ReleaseMessageSwitch = Switch("Feature Switches", "release-message",
@@ -272,22 +272,12 @@ object Switches extends Collections {
     safeState = Off, sellByDate = new DateMidnight(2014, 6, 30)
   )
 
-  val ArticleSlotsSwitch = Switch("Feature Switches", "article-slots",
-    "If this switch is on, inline content slots (for stories, ads, etc) will be generated in article bodies",
-    safeState = Off, sellByDate = new DateMidnight(2014, 7, 1)
-  )
-
   val IndiaRegionSwitch = Switch("Feature Switches", "india-region",
     "If this switch is switched on then the India region will be enabled",
     safeState = Off,
     // I know this is far away, but this will lie dormant for a while (other than testing) while
     // the planets align for the rest of the project
     sellByDate = new DateMidnight(2014, 10, 30)
-  )
-
-  val LayoutHintsSwitch = Switch("Feature Switches", "layout-hints",
-    "If this switch is on, JavaScript will enable the inline-hinting css experiments",
-    safeState = Off, sellByDate = new DateMidnight(2014, 6, 10)
   )
 
   val RssLinkSwitch = Switch("Feature Switches", "rss-link",
@@ -298,12 +288,6 @@ object Switches extends Collections {
   val TagLinkingSwitch = Switch("Feature Switches", "tag-linking",
     "If this switch is turned on then tags will be 'auto' linked to where possible in article bodies",
     safeState = On, sellByDate = new DateMidnight(2014, 6, 30)
-  )
-
-  val FaciaFirstContainerLayoutOverrideSwitch = Switch("Feature Switches", "facia-first-container-layout-override",
-    "If this switch is turned on then the first container on every facia front will have a fixed layout " +
-      "containing two slices with one big article in each one of them",
-    safeState = On, sellByDate = new DateMidnight(2014, 6, 10)
   )
 
   val EnhanceTweetsSwitch = Switch("Feature Switches", "enhance-tweets",
@@ -405,7 +389,7 @@ object Switches extends Collections {
 
   val FaciaToolContainerTagsSwitch = Switch("Facia Tool", "facia-tool-tags",
     "If this switch is on the container configuration will allow articles to show their tags or sections",
-    safeState = Off, sellByDate = new DateMidnight(2014, 6, 7)
+    safeState = Off, sellByDate = new DateMidnight(2014, 7, 7)
   )
 
   // Facia Switches
@@ -467,13 +451,11 @@ object Switches extends Collections {
     LCMortgageFeedSwitch,
     GuBookshopFeedsSwitch,
     NetworkFrontOptIn,
-    ArticleSlotsSwitch,
     ImageServerSwitch,
     FaciaToolPressSwitch,
     ShowAllArticleEmbedsSwitch,
     FrontPressJobSwitch,
     FaciaToolContainerTagsSwitch,
-    LayoutHintsSwitch,
     RssLinkSwitch,
     EnhanceTweetsSwitch,
     WorldCupWallchartEmbedSwitch,
@@ -482,14 +464,13 @@ object Switches extends Collections {
     IncludeBuildNumberInMemcachedKey,
     GeoMostPopular,
     TagLinkingSwitch,
-    FaciaFirstContainerLayoutOverrideSwitch,
     ABHighRelevanceCommercialComponent,
     ABDisplayReferredContent,
     ABHideSupportingLinks,
     ABAcrossTheGuardian,
     SmartBannerSwitch,
+    SurveyBannerSwitch,
     FeaturesAutoContainerSwitch,
-    FunctionBindSwitch,
     ForcePageSkinSwitch
   )
 
