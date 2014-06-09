@@ -27,10 +27,11 @@ define([
             {
                 id: 'show-referred-content',
                 test: function() {
+                    console.log("We are running this mother")
                     var date = new Date();
                     date.setMonth(date.getMonth()-1);
                     if( new History().hasVisitedInPeriodSince(date, 10)) {
-                       MostPopularFactory.setShowReferred();
+                      // MostPopularFactory.setShowReferred();
                     }
                 }
             }

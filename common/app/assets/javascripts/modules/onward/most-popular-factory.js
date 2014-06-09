@@ -1,3 +1,5 @@
+define([],function(){})
+/*
 define([
     'qwery',
     'lodash/objects/assign',
@@ -40,3 +42,4 @@ define([
     return MostPopularFactory;
 
 });
+*/
