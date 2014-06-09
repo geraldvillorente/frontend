@@ -76,7 +76,7 @@ define([
             this.initialised = true;
             modules.initLiveBlogging(config);
             modules.initDiscussion();
-            modules.initOpen(config);
+          //  modules.initOpen(config);
             modules.initFence();
             modules.initTruncateAndTwitter();
         }

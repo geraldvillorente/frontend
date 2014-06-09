@@ -17,17 +17,22 @@ define([
         this.audience = '0.4';
         this.audienceOffset = '0.6';
 
-        this.canRun = function() { return true; };
+        this.canRun = function() {
+            console.log('++ Is this running');
+            return true;
+        };
 
         this.variants = [
             {
                 id: 'control',
-                test: function() {}
+                test: function() {
+                   console.log("++++ Control");
+                }
             },
             {
                 id: 'show-referred-content',
                 test: function() {
-                    console.log("We are running this mother")
+                    console.log("We are running this mother");
                     var date = new Date();
                     date.setMonth(date.getMonth()-1);
                     if( new History().hasVisitedInPeriodSince(date, 10)) {

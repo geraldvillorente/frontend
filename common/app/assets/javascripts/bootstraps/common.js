@@ -150,7 +150,7 @@ define([
 
         transcludePopular: function (config) {
             mediator.on('page:common:ready', function() {
-                new MostPopularFactory(config);
+               // new MostPopularFactory(config);
             });
         },
 
